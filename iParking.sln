@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLee.Android", "DonaLee\DonaLee.Android\DonaLee.Android.csproj", "{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iParking.Android", "DonaLee\DonaLee.Android\iParking.Android.csproj", "{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonaLee.UWP", "DonaLee\DonaLee.UWP\DonaLee.UWP.csproj", "{48222838-20F8-4C11-BA17-5A80C4189083}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iParking.UWP", "DonaLee\DonaLee.UWP\iParking.UWP.csproj", "{48222838-20F8-4C11-BA17-5A80C4189083}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iParking", "DonaLee\DonaLee\iParking.csproj", "{7D28B1B4-6D0C-4AD1-8518-1BD5DB5C9A66}"
 EndProject
