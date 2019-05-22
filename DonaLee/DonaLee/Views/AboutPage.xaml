@@ -48,10 +48,10 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="El primer aplicativo movil desarrollado en Colombia en la que puedes pedir, ver el estado y reservar un parqueadero." />
+                                <Span Text="El primer aplicativo movil desarrollado en Colombia en la que puedes pedir, ver el estado y reservar un parqueadero en " />
                                 <Span Text=" " />
                                 <Span Text="Bogota, Colombia " FontAttributes="Bold" />
-                                <Span Text="UMB" />
+                                <Span Text="" />
 
                             </FormattedString.Spans>
                             
@@ -73,7 +73,7 @@
                 </Label>
                 <Button Margin="0,10,0,0" Text="Visitanos"  Style="{StaticResource iParkingStyle}"
                         Command="{Binding OpenWaCommand}"
-                        BackgroundColor="{StaticResource Primary}"
+                       
                         TextColor="White" />
             </StackLayout>
         </ScrollView>

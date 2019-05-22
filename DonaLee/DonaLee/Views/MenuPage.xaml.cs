@@ -18,10 +18,10 @@ namespace iParking.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Perfil, Title="Perfil" },
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Buscar Libro" },
-                new HomeMenuItem {Id = MenuItemType.MisCarros, Title="Mis Libros" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.Perfil, Title="Mi perfil" },
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="Reservar" },
+                new HomeMenuItem {Id = MenuItemType.MisCarros, Title="Mis Vehículos" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="Sobre iParking" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

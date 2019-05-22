@@ -19,7 +19,7 @@ namespace iParking.ViewModels
 
          public ItemsViewModel()
         {
-            Title = "Libros";
+            Title = "iParking";
             ItemsBooks = new ObservableCollection<Libro>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
