@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iParking.Views.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                    <Image x:Name="imgBanner" Source="https://i.ibb.co/YZynrNm/logo.jpg"></Image>
+                    <Label Margin="0,0,0,10" Text="Registro" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtCorreo" Placeholder="Correo Electronico"></Entry>
+                    <Entry x:Name="txtNombre" Placeholder="Nombre"></Entry>
+                    <Entry x:Name="txtApellido" Placeholder="Apellido"></Entry>
+                    <Entry x:Name="txtContrasenia" Placeholder="Contraseña" IsPassword="True"></Entry>
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnAdd" WidthRequest="200" Style="{StaticResource FollowButton}" Text="Registrar" Clicked="BtnRegistrar"/>
+                    </StackLayout>
+                    <!--<ListView x:Name="lstUsers"  >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Name}"></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>-->
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
