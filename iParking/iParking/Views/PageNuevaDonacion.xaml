@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iParking.Views.PageNuevaDonacion"
+             Title="Nuevo libro">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancelar" Clicked="Cancel_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="cancel.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Guardar" Clicked="Save_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="save.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Titulo" FontSize="Medium" />
+                <Entry Text="{Binding _libro.Titulo__c}" Placeholder="Nombre del libro" FontSize="Small" />
+                <Label Text="Autor" FontSize="Medium" />
+                <Editor Text="{Binding _libro.Autor__c}" Placeholder="Autor del libro" FontSize="Small" Margin="0" />
+                <Label Text="Año" FontSize="Medium" />
+                <DatePicker  Date="{Binding _libro.Anio__c}" />
+                <Label Text="Editorial" FontSize="Medium" />
+                <Entry Text="{Binding _libro.Editorial__c}" Placeholder="Descripcion del libro" FontSize="Small" />
+                <Label Text="Genero" FontSize="Medium" />
+                <Picker x:Name="pickerGenero" Title="Elige un Genero" ItemsSource="{Binding ListGeneros}" ItemDisplayBinding="{Binding NameGen}" />
+                <!--<Entry Text="{Binding _libro.Genero__c}" Placeholder="Descripcion del libro" FontSize="Small" />-->
+                <Label Text="Descripción" FontSize="Medium" />
+                <Entry Text="{Binding _libro.Descripcion__c}" Placeholder="Descripcion del libro" FontSize="Small" />
+                <Label Text="Paginas" FontSize="Medium" />
+                <Entry Text="{Binding _libro.Paginas,Mode=TwoWay}" Keyboard="Numeric" Placeholder="Numero de paginas" FontSize="Small" />
+                <Button Style="{StaticResource FollowButton}" Text="TOMAR IMAGEN"></Button>
+               </StackLayout>
+
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

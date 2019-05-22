@@ -17,18 +17,18 @@ namespace iParking.Views
         conection conection = new conection();
 
        // public string[,] listaGeneros=[{"Aventura"];
-        public List<Genero> ListGeneros { get; set; }
-        public List<Genero> GetGeneros()
-        {
-             ListGeneros = new List<Genero>()
-                {
-                    new Genero(){  NameGen="Acción"},
-                    new Genero(){  NameGen="Aventura"},
-                    new Genero(){  NameGen="Romantica"},
-                    new Genero(){  NameGen="Suspenso"}
-                };
-            return ListGeneros;
-        }
+       // public List<Genero> ListGeneros { get; set; }
+        //public List<Genero> GetGeneros()
+        //{
+        //     ListGeneros = new List<Genero>()
+        //        {
+        //            new Genero(){  NameGen="Acción"},
+        //            new Genero(){  NameGen="Aventura"},
+        //            new Genero(){  NameGen="Romantica"},
+        //            new Genero(){  NameGen="Suspenso"}
+        //        };
+        //    return ListGeneros;
+        //}
 
         public PageNuevaDonacion()
         {
@@ -36,7 +36,7 @@ namespace iParking.Views
             //INICIALIZA LISTA DE GENEROS
            // listaGeneros = ["Aventura","Romatica"];
             InitializeComponent();
-            pickerGenero.ItemsSource = GetGeneros().ToList();
+            //pickerGenero.ItemsSource = GetGeneros().ToList();
             _libro = new Libro
             {
                 Autor__c = "",
@@ -51,7 +51,7 @@ namespace iParking.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            _libro.Genero = ListGeneros[pickerGenero.SelectedIndex].NameGen;
+           // _libro.Genero = ListGeneros[pickerGenero.SelectedIndex].NameGen;
 
                 await DisplayAlert("iParking", "Libro "+_libro.Titulo__c+" cargado.", "OK");
             // MessagingCenter.Send(this, "Añadir", _libro);

@@ -68,7 +68,7 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button Margin="0,10,0,0" Text="Abrir Web"  Style="{StaticResource FollowButton}"
+                <Button Margin="0,10,0,0" Text="Abrir Web"  Style="{StaticResource iParkingStyle}"
                         Command="{Binding OpenWaCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />

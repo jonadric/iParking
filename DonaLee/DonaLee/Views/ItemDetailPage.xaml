@@ -63,7 +63,7 @@
 
                 <!-- follow button -->
                 <Button Text="¡Lo quiero!"
-                Style="{StaticResource FollowButton}"
+                Style="{StaticResource iParkingStyle}"
                 Grid.Row="4"
                         Clicked="BntPedir"
                 Margin="20,0"/>

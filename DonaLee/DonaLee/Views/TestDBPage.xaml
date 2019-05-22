@@ -9,7 +9,7 @@
         <StackLayout>
             <StackLayout>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                    <Image x:Name="imgBanner" Source="https://i.ibb.co/YZynrNm/logo.jpg"></Image>
+                    <Image x:Name="imgBanner" Source="https://cdn.shopify.com/s/files/1/0099/9562/files/Header-Icon-User.png"></Image>
                     <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                         <Label Margin="0,0,0,10" Text="{Binding _user.NombresUsuario}" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
                         <Label Margin="0,0,0,10" Text="#" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>

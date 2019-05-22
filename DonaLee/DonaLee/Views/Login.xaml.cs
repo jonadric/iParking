@@ -31,10 +31,9 @@ namespace iParking.Views
             UserApp = await conection.GetUser(txtCorreo.Text);
             if (UserApp != null)
             {
-                // txtCorreo.Text = User.IdUsuario.ToString();
                 if (txtContrasenia.Text == UserApp.ContraseniaUsuario)
                 {
-                    await DisplayAlert("iParking", "Bienvenido", "OK");
+                    await DisplayAlert("iParking", "Bienvenido ahora puedes reservar un parqueadero", "OK");
                     App.Current.Properties["id_User"] = UserApp.IdUsuario.ToString();
                     App.Current.MainPage = new MainPage();
                 }
@@ -47,22 +46,12 @@ namespace iParking.Views
             {
                 await DisplayAlert("Error", "Usuario invalido", "OK");
             }
-
-            // Debug.Write("Entro a LoginBtn");
-            // var profile = new Perfil();
-            // Application.Current.MainPage = new MaestroDetalle(profile);
-            //Navigation.RemovePage(this);
-
-
-            // await Navigation.PushAsync(new MainPage());
         }
 
          private void BtnToReg_Clicked(object sender, EventArgs e)
         {
 
              Navigation.PushModalAsync(new Registro());
-           // Navigation.RemovePage(this);
-            //await Navigation.PushAsync(new Registro());
         }
 
     }

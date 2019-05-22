@@ -8,7 +8,7 @@
             <!--  colors  -->
             <Color x:Key="HeaderTextColor">#585858</Color>
             <Color x:Key="BodyTextColor">#C3C3C3</Color>
-            <Color x:Key="ButtonBackgroundColor">#5992FF</Color>
+            <Color x:Key="ButtonBackgroundColor">#61B68C</Color>
 
             <!--  font families  -->
             <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String">
@@ -71,7 +71,7 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
             </Style>
 
-            <Style x:Key="FollowButton" TargetType="Button">
+            <Style x:Key="iParkingStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="HeightRequest" Value="40" />

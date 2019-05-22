@@ -63,7 +63,7 @@
 
                 <!-- follow button -->
                 <Button Text="¡Entregar Libro!"
-                Style="{StaticResource FollowButton}"
+                Style="{StaticResource iParkingStyle}"
                 Grid.Row="4"
                         Clicked="BntEntregar"
                 Margin="20,0"/>

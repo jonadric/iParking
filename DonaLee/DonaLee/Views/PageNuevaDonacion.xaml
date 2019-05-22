@@ -39,7 +39,7 @@
                 <Entry Text="{Binding _libro.Descripcion__c}" Placeholder="Descripcion del libro" FontSize="Small" />
                 <Label Text="Paginas" FontSize="Medium" />
                 <Entry Text="{Binding _libro.Paginas,Mode=TwoWay}" Keyboard="Numeric" Placeholder="Numero de paginas" FontSize="Small" />
-                <Button Style="{StaticResource FollowButton}" Text="TOMAR IMAGEN"></Button>
+                <Button Style="{StaticResource iParkingStyle}" Text="TOMAR IMAGEN"></Button>
                </StackLayout>
 
         </ScrollView>

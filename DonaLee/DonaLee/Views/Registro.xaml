@@ -6,14 +6,14 @@
         <StackLayout>
             <StackLayout>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                    <Image x:Name="imgBanner" Source="https://i.ibb.co/YZynrNm/logo.jpg"></Image>
+                    <!--<Image x:Name="imgBanner" Source="https://i.ibb.co/YZynrNm/logo.jpg"></Image>-->
                     <Label Margin="0,0,0,10" Text="Registro" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
                     <Entry x:Name="txtCorreo" Placeholder="Correo Electronico"></Entry>
                     <Entry x:Name="txtNombre" Placeholder="Nombre"></Entry>
                     <Entry x:Name="txtApellido" Placeholder="Apellido"></Entry>
                     <Entry x:Name="txtContrasenia" Placeholder="Contraseña" IsPassword="True"></Entry>
                     <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                        <Button x:Name="btnAdd" WidthRequest="200" Style="{StaticResource FollowButton}" Text="Registrar" Clicked="BtnRegistrar"/>
+                        <Button x:Name="btnAdd" WidthRequest="200" Style="{StaticResource iParkingStyle}" Text="Registrar" Clicked="BtnRegistrar"/>
                     </StackLayout>
                     <!--<ListView x:Name="lstUsers"  >
                         <ListView.ItemTemplate>
