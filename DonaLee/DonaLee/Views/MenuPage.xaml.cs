@@ -18,7 +18,7 @@ namespace iParking.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Prueba, Title="Perfil" },
+                new HomeMenuItem {Id = MenuItemType.Perfil, Title="Perfil" },
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Buscar Libro" },
                 new HomeMenuItem {Id = MenuItemType.MisLibros, Title="Mis Libros" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }

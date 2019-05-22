@@ -29,11 +29,11 @@ namespace iParking.Views
             await Navigation.PushAsync(new MisLibrosDetailPage(item));
 
             // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            //ItemsListView.SelectedItem = null;
         }
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new PageNuevaDonacion()));
+           // await Navigation.PushModalAsync(new NavigationPage(new PageNuevaDonacion()));
         }
 
         protected override void OnAppearing()

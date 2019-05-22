@@ -26,7 +26,7 @@ namespace iParking.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Prueba:
+                    case (int)MenuItemType.Perfil:
                         MenuPages.Add(id, new NavigationPage(new TestDBPage()));
                         break;
                     case (int)MenuItemType.Browse:

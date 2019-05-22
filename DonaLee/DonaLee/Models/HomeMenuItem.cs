@@ -6,7 +6,7 @@ namespace iParking.Models
 {
     public enum MenuItemType
     {
-        Prueba,
+        Perfil,
         Browse,
         MisLibros,
         About

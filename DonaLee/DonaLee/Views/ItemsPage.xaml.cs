@@ -20,7 +20,6 @@ namespace iParking.Views
         public ItemsPage()
         {
             InitializeComponent();
-
             BindingContext = viewModel = new ItemsViewModel();
         }
 
@@ -33,12 +32,12 @@ namespace iParking.Views
             await Navigation.PushAsync(new ItemDetailPage(item));
 
             // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            //ItemsListView.SelectedItem = null;
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new PageNuevaDonacion()));
+           // await Navigation.PushModalAsync(new NavigationPage(new PageNuevaDonacion()));
         }
 
         protected override void OnAppearing()
