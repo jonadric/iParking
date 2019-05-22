@@ -12,10 +12,10 @@ using iParking.ViewModels;
 namespace iParking.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MisLibrosPage : ContentPage
+    public partial class MisVehiculosPage : ContentPage
     {
         MisLibrosModel viewModel;
-        public MisLibrosPage()
+        public MisVehiculosPage()
         {
             InitializeComponent();
             BindingContext = viewModel = new MisLibrosModel();
@@ -26,7 +26,7 @@ namespace iParking.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new MisLibrosDetailPage(item));
+            await Navigation.PushAsync(new MisVehiculosDetailPage(item));
 
             // Manually deselect item.
             //ItemsListView.SelectedItem = null;

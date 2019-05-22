@@ -9,16 +9,16 @@ using iParking.Models;
 namespace iParking.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MisLibrosDetailPage : ContentPage
+    public partial class MisVehiculosDetailPage : ContentPage
     {
         ItemDetailViewModel viewModel;
         public Libro item1;
-        public MisLibrosDetailPage(ItemDetailViewModel viewModel)
+        public MisVehiculosDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
             BindingContext = this.viewModel = viewModel;
         }
-        public MisLibrosDetailPage(Libro item)
+        public MisVehiculosDetailPage(Libro item)
         {
             InitializeComponent();
 

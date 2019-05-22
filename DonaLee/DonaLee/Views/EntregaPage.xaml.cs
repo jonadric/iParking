@@ -41,7 +41,7 @@ namespace iParking.Views
             txtID.Text = string.Empty;           
             await DisplayAlert("Gracias", "Libro Entregado", "OK");
             
-           // await Navigation.PushModalAsync(new MisLibrosPage());
+           // await Navigation.PushModalAsync(new MisVehiculosPage());
 
         }
         //private async void BtnRetrive_Clicked(object sender, EventArgs e)

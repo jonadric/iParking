@@ -16,6 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\MisVehiculosDetailPage.xaml.cs">
+      <DependentUpon>MisVehiculosDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MisVehiculosPage.xaml.cs">
+      <DependentUpon>MisVehiculosPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PageNuevoVehiculo.xaml.cs">
       <DependentUpon>PageNuevoVehiculo.xaml</DependentUpon>
     </Compile>
@@ -28,10 +34,10 @@
     <EmbeddedResource Update="Views\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MisLibrosDetailPage.xaml">
+    <EmbeddedResource Update="Views\MisVehiculosDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MisLibrosPage.xaml">
+    <EmbeddedResource Update="Views\MisVehiculosPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Registro.xaml">
@@ -67,10 +73,10 @@
     <None Update="Views\MenuPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Views\MisLibrosDetailPage.xaml">
+    <None Update="Views\MisVehiculosDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Views\MisLibrosPage.xaml">
+    <None Update="Views\MisVehiculosPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\PageNuevoVehiculo.xaml">

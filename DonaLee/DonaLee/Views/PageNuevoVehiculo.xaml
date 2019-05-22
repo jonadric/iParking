@@ -24,19 +24,22 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="15">
-                <Label Text="Titulo" FontSize="Medium" />
-                <Entry Text="{Binding _libro.Titulo__c}" Placeholder="Nombre del libro" FontSize="Small" />
-                <Label Text="Autor" FontSize="Medium" />
-                <Editor Text="{Binding _libro.Autor__c}" Placeholder="Autor del libro" FontSize="Small" Margin="0" />
-                <Label Text="Año" FontSize="Medium" />
-                <DatePicker  Date="{Binding _libro.Anio__c}" />
-                <Label Text="Editorial" FontSize="Medium" />
-                <Entry Text="{Binding _libro.Editorial__c}" Placeholder="Descripcion del libro" FontSize="Small" />
-                <Label Text="Genero" FontSize="Medium" />
-                <Picker x:Name="pickerGenero" Title="Elige un Genero" ItemsSource="{Binding ListGeneros}" ItemDisplayBinding="{Binding NameGen}" />
-                <!--<Entry Text="{Binding _libro.Genero__c}" Placeholder="Descripcion del libro" FontSize="Small" />-->
+                <Label Text="Marca" FontSize="Medium" />
+                <Entry Text="{Binding _libro.Titulo__c}" Placeholder="" FontSize="Small" />
+                <Label Text="Modelo" FontSize="Medium" />
+                <Editor Text="{Binding _libro.Autor__c}" Placeholder="" FontSize="Small" Margin="0" />
+                <Label Text="Color" FontSize="Medium" />
+              <Entry Text="{Binding _libro.Titulo__c}" Placeholder="" FontSize="Small" />
+
+              <!--<DatePicker  Date="{Binding _libro.Anio__c}" />-->
+                <Label Text="Placa" FontSize="Medium" />
+                <Entry Text="{Binding _libro.Editorial__c}" Placeholder="xxx" FontSize="Small" />
+              <Entry Text="{Binding _libro.Editorial__c}" Placeholder="xxx" FontSize="Small" />
+
+              <Label Text="Tipo de Vehiculo" FontSize="Medium" />
+                <Picker x:Name="pickerGenero" Title="Elige un vehiculo" ItemsSource="{Binding ListGeneros}" ItemDisplayBinding="{Binding NameGen}" />
                 <Label Text="Descripción" FontSize="Medium" />
-                <Entry Text="{Binding _libro.Descripcion__c}" Placeholder="Descripcion del libro" FontSize="Small" />
+                <Entry Text="{Binding _libro.Descripcion__c}" Placeholder="Descripcionpara tener en cuenta" FontSize="Small" />
                </StackLayout>
 
         </ScrollView>
