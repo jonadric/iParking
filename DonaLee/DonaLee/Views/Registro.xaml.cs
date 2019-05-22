@@ -47,8 +47,13 @@ namespace iParking.Views
                 await Navigation.PushModalAsync(new Login());
 
             }
+
         }
-                
+        async void Cancel_ClickedRegistro(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
     }
 
 }

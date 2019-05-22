@@ -2,6 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="iParking.Views.Registro">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancelar" Clicked="Cancel_ClickedRegistro">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="cancel.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+      
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
@@ -14,6 +25,8 @@
                     <Entry x:Name="txtContrasenia" Placeholder="Contraseña" IsPassword="True"></Entry>
                     <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                         <Button x:Name="btnAdd" WidthRequest="200" Style="{StaticResource iParkingStyle}" Text="Registrar" Clicked="BtnRegistrar"/>
+                        <Button x:Name="bntCancel" WidthRequest="150" Style="{StaticResource iParkingStyle}" Text="Cancelar" Clicked="Cancel_ClickedRegistro"/>
+
                     </StackLayout>
                     <!--<ListView x:Name="lstUsers"  >
                         <ListView.ItemTemplate>
