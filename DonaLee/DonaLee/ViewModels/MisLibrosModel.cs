@@ -19,7 +19,7 @@ namespace iParking.ViewModels
 
         public MisLibrosModel()
         {
-            Title = "MisLibros";
+            Title = "MisCarros";
             ItemsBooks = new ObservableCollection<Libro>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

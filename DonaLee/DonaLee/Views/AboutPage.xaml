@@ -25,14 +25,13 @@
         </Grid.RowDefinitions>
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <Image Source="https://i.ibb.co/YZynrNm/logo.jpg" VerticalOptions="Center" HeightRequest="64" />
+                <!--<Image Source="https://i.ibb.co/YZynrNm/logo.jpg" VerticalOptions="Center" HeightRequest="64" />-->
                 
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">            
 
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-                <WebView x:Name="webiParking" Source="https://jonadric.github.io/iParkingWeb/" WidthRequest="1000" HeightRequest="1000" />
 
                 <Label FontSize="22">
                     <Label.FormattedText>
@@ -49,12 +48,11 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="El primer aplicativo movil desarrollado en Colombia en la que puedes donar, compartir y disfrutar de la lectura." />
+                                <Span Text="El primer aplicativo movil desarrollado en Colombia en la que puedes pedir, ver el estado y reservar un parqueadero." />
                                 <Span Text=" " />
                                 <Span Text="Bogota, Colombia " FontAttributes="Bold" />
                                 <Span Text="UMB" />
 
-                                <Span Text="Agradecemos tu valiosa colaboración en este trabajo y esperamos poder ofrecerte un buen servicio mientras crecemos como plataforma que pueda ayudarte a crecer." />
                             </FormattedString.Spans>
                             
                         </FormattedString>
@@ -64,9 +62,9 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Puedes donar un libro en el boton ( + ) " />
+                                <Span Text="Puedes pedir un parqueadero tan solo con un boton ( + ) " />
                                 <Span Text=" " />
-                                <Span Text="Recuerda usar la app" FontAttributes="Bold" />
+                                <Span Text="Recuerda usar la Pagina Web" FontAttributes="Bold" />
                                 <Span Text=" " />
                                 <Span Text="Version 2.0" />
                             </FormattedString.Spans>

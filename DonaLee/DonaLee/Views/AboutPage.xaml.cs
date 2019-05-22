@@ -21,7 +21,7 @@ namespace iParking.Views
         {
             
             InitializeComponent();           
-            Uri newUri = new Uri ("https://api.whatsapp.com/send?phone=+573133980136&text=Hola%20quiero%20ese%20libro%20+%20%22Perro%20come%20perro%22");
+            Uri newUri = new Uri ("https://api.whatsapp.com/send?phone=+573133980136&text=Hola");
             // Uri newUri = new Uri ("https://api.whatsapp.com/send?phone="+ _libroLoquiero.idUser +"&text= Hola amigo mio");
             OpenWaCommand = new Command(() => Device.OpenUri(newUri));
 

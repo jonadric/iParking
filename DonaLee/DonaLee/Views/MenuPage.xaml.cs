@@ -20,7 +20,7 @@ namespace iParking.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Perfil, Title="Perfil" },
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Buscar Libro" },
-                new HomeMenuItem {Id = MenuItemType.MisLibros, Title="Mis Libros" },
+                new HomeMenuItem {Id = MenuItemType.MisCarros, Title="Mis Libros" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
 

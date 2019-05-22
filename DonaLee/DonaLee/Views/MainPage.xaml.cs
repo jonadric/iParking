@@ -35,7 +35,7 @@ namespace iParking.Views
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
-                    case (int)MenuItemType.MisLibros:
+                    case (int)MenuItemType.MisCarros:
                         MenuPages.Add(id, new NavigationPage(new MisLibrosPage()));
                         break;
 
