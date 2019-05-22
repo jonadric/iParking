@@ -27,7 +27,7 @@ namespace iParking.ViewModels
             ///
           //  llenarDeComienzo();
 
-            //MessagingCenter.Subscribe<PageNuevaDonacion, Libro>(this, "AddBook", async (obj, item) =>
+            //MessagingCenter.Subscribe<PageNuevoVehiculo, Libro>(this, "AddBook", async (obj, item) =>
             //{
             //    var newItem = item as Libro;
             //    newItem.Autor__c = "jejejej";

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="iParking.Views.PageNuevaDonacion"
-             Title="Nuevo libro">
+             x:Class="iParking.Views.PageNuevoVehiculo"
+             Title="Agregar Vehículo">
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancelar" Clicked="Cancel_Clicked">
@@ -37,9 +37,6 @@
                 <!--<Entry Text="{Binding _libro.Genero__c}" Placeholder="Descripcion del libro" FontSize="Small" />-->
                 <Label Text="Descripción" FontSize="Medium" />
                 <Entry Text="{Binding _libro.Descripcion__c}" Placeholder="Descripcion del libro" FontSize="Small" />
-                <Label Text="Paginas" FontSize="Medium" />
-                <Entry Text="{Binding _libro.Paginas,Mode=TwoWay}" Keyboard="Numeric" Placeholder="Numero de paginas" FontSize="Small" />
-                <Button Style="{StaticResource iParkingStyle}" Text="TOMAR IMAGEN"></Button>
                </StackLayout>
 
         </ScrollView>

@@ -11,7 +11,7 @@ using System.Linq;
 namespace iParking.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageNuevaDonacion : ContentPage
+    public partial class PageNuevoVehiculo : ContentPage
     {
         public Libro _libro { get; set; }
         conection conection = new conection();
@@ -30,7 +30,7 @@ namespace iParking.Views
         //    return ListGeneros;
         //}
 
-        public PageNuevaDonacion()
+        public PageNuevoVehiculo()
         {
 
             //INICIALIZA LISTA DE GENEROS

@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\PageNuevaDonacion.xaml.cs">
-      <DependentUpon>PageNuevaDonacion.xaml</DependentUpon>
+    <Compile Update="Views\PageNuevoVehiculo.xaml.cs">
+      <DependentUpon>PageNuevoVehiculo.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -73,7 +73,7 @@
     <None Update="Views\MisLibrosPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Views\PageNuevaDonacion.xaml">
+    <None Update="Views\PageNuevoVehiculo.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\Registro.xaml">

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="iParking.Views.MisLibrosPage"
              Title="{Binding Title}"
-             x:Name="MisLibros">
+             x:Name="MisCarros">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Donar " Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
@@ -15,7 +15,43 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <WebView HeightRequest="1000" WidthRequest="1000" Source="https://jonadric.github.io/iParkingWeb/" />
+        <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding ItemsBooks}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image Source="{Binding Imagen__c}" 
+                   HorizontalOptions="Center"
+                   HeightRequest="70" WidthRequest="50"
+                   TranslationY="10"/>
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Titulo__c}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                                <Label Text="{Binding Descripcion__c}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                <Label Text="{Binding Autor__c}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="8" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Button x:Name="buscar" WidthRequest="200" Text="BUSCAR ♥" Clicked="BtnRegistrar"/>
     </StackLayout>
 </ContentPage>
