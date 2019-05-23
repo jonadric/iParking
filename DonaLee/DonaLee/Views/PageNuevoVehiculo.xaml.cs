@@ -11,7 +11,7 @@ using System.Linq;
 namespace iParking.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageNuevaDonacion : ContentPage
+    public partial class PageNuevoVehiculo : ContentPage
     {
         public Libro _libro { get; set; }
         public Vehiculo vehiculo { get; set; }
@@ -20,7 +20,7 @@ namespace iParking.Views
 
       
 
-        public PageNuevaDonacion()
+        public PageNuevoVehiculo()
         {
 
           
@@ -40,9 +40,10 @@ namespace iParking.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-           // _libro.Genero = ListGeneros[pickerGenero.SelectedIndex].NameGen;
+            // _libro.Genero = ListGeneros[pickerGenero.SelectedIndex].NameGen;
 
-                await DisplayAlert("iParking", "Libro "+vehiculo.placa+" cargado.", "OK");
+            vehiculo.placa = placa1.Text + placa2.Text;
+                await DisplayAlert("iParking","Vehiculo "+vehiculo.placa+" agregado.", "OK");
             // MessagingCenter.Send(this, "Añadir", _libro);
             
             var allBoks = await conection.GetAllBooks();
