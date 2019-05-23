@@ -99,12 +99,12 @@ namespace iParking.Models
                   Ubicacion = item.Object.Ubicacion
               }).ToList();
         }
-        public async Task AddBook(Libro booksito,int idUser)
+        public async Task AddBook(Vehiculo newVehiculo,int idUser)
         {
 
             await firebase
               .Child("Books")
-              .PostAsync(new Libro() { Anio__c = booksito.Anio__c, Autor__c = booksito.Autor__c, Descripcion__c = booksito.Descripcion__c, Editorial__c = booksito.Editorial__c, Genero = booksito.Genero, Imagen__c = booksito.Imagen__c, ISBN__c = booksito.ISBN__c, Titulo__c =booksito.Titulo__c,idUser= idUser.ToString(),IdBook=booksito.IdBook,Paginas=booksito.Paginas,Ubicacion=booksito.Ubicacion});
+              .PostAsync(new Vehiculo {color= newVehiculo.color,marca= newVehiculo.marca,modelo= newVehiculo.modelo,hora_entrada= newVehiculo.hora_entrada,placa= newVehiculo.placa,IdUser= newVehiculo.IdUser });
         }
         public async Task UpdateBookByID(Libro Libre,int IdNewUser)
         {
