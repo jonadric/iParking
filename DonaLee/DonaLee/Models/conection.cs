@@ -77,34 +77,27 @@ namespace iParking.Models
 
             }
 
-        public async Task<List<Libro>> GetAllBooks()
+        public async Task<List<Vehiculo>> GetAllVehicles()
         {
 
             return (await firebase
-              .Child("Books")
-              .OnceAsync<Libro>()).Select(item => new Libro
+              .Child("Vehicles")
+              .OnceAsync<Vehiculo>()).Select(item => new Vehiculo
               {
-                  Anio__c = item.Object.Anio__c,
-                  Autor__c = item.Object.Autor__c,
-                  Editorial__c = item.Object.Editorial__c,
-                  IdBook = item.Object.IdBook,
-                  Imagen__c = item.Object.Imagen__c,
-                  ISBN__c = item.Object.ISBN__c,
-                  Titulo__c = item.Object.Titulo__c,
-                  Genero = item.Object.Genero,
-                  Descripcion__c = item.Object.Descripcion__c,
-                  Valoracion__c = item.Object.Valoracion__c,
-                  idUser = item.Object.idUser,
-                  Paginas = item.Object.Paginas,
-                  Ubicacion = item.Object.Ubicacion
+                  color = item.Object.color,
+                  IdUser = item.Object.IdUser,
+                  marca = item.Object.marca,
+                  modelo = item.Object.modelo,
+                  placa = item.Object.placa,
+                  tipoVehiculo = item.Object.tipoVehiculo
               }).ToList();
         }
-        public async Task AddBook(Vehiculo newVehiculo,int idUser)
+        public async Task AddVehicles(Vehiculo newVehiculo,int idUser)
         {
 
             await firebase
-              .Child("Vehiculos")
-              .PostAsync(new Vehiculo {color= newVehiculo.color,marca= newVehiculo.marca,modelo= newVehiculo.modelo,hora_entrada= newVehiculo.hora_entrada,placa= newVehiculo.placa,IdUser= newVehiculo.IdUser });
+              .Child("Vehicles")
+              .PostAsync(new Vehiculo {color= newVehiculo.color,marca= newVehiculo.marca,modelo= newVehiculo.modelo,placa= newVehiculo.placa,IdUser= newVehiculo.IdUser });
         }
         public async Task UpdateBookByID(Libro Libre,int IdNewUser)
         {

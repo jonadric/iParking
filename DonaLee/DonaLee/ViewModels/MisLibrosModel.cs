@@ -14,26 +14,26 @@ namespace iParking.ViewModels
     {
         conection conection = new conection();
 
-        public ObservableCollection<Libro> ItemsBooks { get; set; }
+        public ObservableCollection<Vehiculo> ItemsVehicles { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public MisLibrosModel()
         {
             Title = "MisCarros";
-            ItemsBooks = new ObservableCollection<Libro>();
+            ItemsVehicles = new ObservableCollection<Vehiculo>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
         }
 
         async Task llenarDeComienzo()
         {
-            var allBoks = await conection.GetAllBooks();
-            foreach (var libro in allBoks)
+            var allVehicles = await conection.GetAllVehicles();
+            foreach (var vehicle in allVehicles)
             {
                 var valor = Application.Current.Properties["id_User"];
-                if (libro.idUser==valor.ToString())
+                if (vehicle.IdUser == int.Parse( valor.ToString()))
                 {
-                    ItemsBooks.Add(libro);
+                    ItemsVehicles.Add(vehicle);
 
                 }
             }
@@ -48,13 +48,13 @@ namespace iParking.ViewModels
 
             try
             {
-                ItemsBooks.Clear();
+                ItemsVehicles.Clear();
                 await llenarDeComienzo();
-                //var allBoks = await conection.GetAllBooks();
+                //var allBoks = await conection.GetAllVehicles();
                 ////var items = await DataStore.GetItemsAsync(true);
                 //foreach (var libro in allBoks)
                 //{
-                //    ItemsBooks.Add(libro);
+                //    ItemsVehicles.Add(libro);
                 //}
             }
             catch (Exception ex)

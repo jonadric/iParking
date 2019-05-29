@@ -11,7 +11,7 @@ namespace iParking.Models
         public string modelo { get; set; }
         public string color { get; set; }
         public string tipoVehiculo { get; set; }
-        public string hora_entrada { get; set; }
+        //public string hora_entrada { get; set; }
         public int IdUser { get; set; }
 
 

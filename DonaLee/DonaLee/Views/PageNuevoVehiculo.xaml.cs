@@ -18,17 +18,26 @@ namespace iParking.Views
 
         conection conection = new conection();
 
-      
+
+         List <Vehiculo> ListGeneros;
+
+
 
         public PageNuevoVehiculo()
         {
 
           
 
+
             InitializeComponent();
-         
+
+            pickerTipoVehiculo.Items.Add("Motocicleta");
+            pickerTipoVehiculo.Items.Add("Bicicleta");
+            pickerTipoVehiculo.Items.Add("Automóvil");
+
 
             vehiculo = new Vehiculo
+
             { color = "Blue" ,modelo ="Audi"
             };
 
@@ -42,15 +51,16 @@ namespace iParking.Views
         {
             // _libro.Genero = ListGeneros[pickerGenero.SelectedIndex].NameGen;
 
+
             vehiculo.placa = placa1.Text + placa2.Text;
                 await DisplayAlert("iParking","Vehiculo "+vehiculo.placa+" agregado.", "OK");
             // MessagingCenter.Send(this, "Añadir", _libro);
             
-            var allBoks = await conection.GetAllBooks();
+            var allBoks = await conection.GetAllVehicles();
            // var CodBookNuevoGenerado = allBoks[allBoks.Count -1];
            // _libro.IdBook = CodBookNuevoGenerado.IdBook + 1;
             var valor = Application.Current.Properties["id_User"];
-            await conection.AddBook(vehiculo, int.Parse(valor.ToString()));
+            await conection.AddVehicles(vehiculo, int.Parse(valor.ToString()));
             await Navigation.PopModalAsync();
         }
 

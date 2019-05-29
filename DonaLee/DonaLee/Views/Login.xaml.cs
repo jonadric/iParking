@@ -33,7 +33,7 @@ namespace iParking.Views
             {
                 if (txtContrasenia.Text == UserApp.ContraseniaUsuario)
                 {
-                    await DisplayAlert("iParking", "Bienvenido ahora puedes reservar un parqueadero", "OK");
+                    await DisplayAlert("iParking", "! Bienvenido ahora puedes reservar un parqueadero ¡", "OK");
                     App.Current.Properties["id_User"] = UserApp.IdUsuario.ToString();
                     App.Current.MainPage = new MainPage();
                 }

@@ -14,33 +14,33 @@ namespace iParking.ViewModels
     {
         conection conection = new conection();
 
-        public ObservableCollection<Libro> ItemsBooks { get; set; }
+        public ObservableCollection<Vehiculo> ItemsBooks { get; set; }
         public Command LoadItemsCommand { get; set; }
 
          public ItemsViewModel()
         {
             Title = "iParking";
-            ItemsBooks = new ObservableCollection<Libro>();
+            ItemsBooks = new ObservableCollection<Vehiculo>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             ///VAMOS A LLENAR DESDE UN COMIENZO
             ///
           //  llenarDeComienzo();
 
-            //MessagingCenter.Subscribe<PageNuevoVehiculo, Libro>(this, "AddBook", async (obj, item) =>
+            //MessagingCenter.Subscribe<PageNuevoVehiculo, Libro>(this, "AddVehicles", async (obj, item) =>
             //{
             //    var newItem = item as Libro;
             //    newItem.Autor__c = "jejejej";
-            //    ItemsBooks.Add(newItem);
+            //    ItemsVehicles.Add(newItem);
             //    await DataStore.AddItemAsync(newItem);
             //});
         }
 
         async Task llenarDeComienzo() {
-            var allBoks = await conection.GetAllBooks();
-            foreach (var libro in allBoks)
+            var allVehiculos = await conection.GetAllVehicles();
+            foreach (var _vehiculo in allVehiculos)
             {
-                ItemsBooks.Add(libro);
+                ItemsBooks.Add(_vehiculo);
             }
         }
 
@@ -54,7 +54,7 @@ namespace iParking.ViewModels
             try
             {
                 ItemsBooks.Clear();
-                var allBoks = await conection.GetAllBooks();
+                var allBoks = await conection.GetAllVehicles();
 
 
                 //var items = await DataStore.GetItemsAsync(true);

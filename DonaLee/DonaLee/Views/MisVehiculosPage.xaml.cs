@@ -40,13 +40,13 @@ namespace iParking.Views
         {
             base.OnAppearing();
 
-            if (viewModel.ItemsBooks.Count == 0)
+            if (viewModel.ItemsVehicles.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
 
         async private void BtnRegistrar(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "" + viewModel.ItemsBooks, "Ok");
+            await DisplayAlert("Alert", "" + viewModel.ItemsVehicles, "Ok");
         }
     }
 }

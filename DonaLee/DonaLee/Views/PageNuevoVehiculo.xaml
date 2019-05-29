@@ -21,28 +21,30 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     
-    <ContentPage.Content>
+    <!--<ContentPage.Content>-->
         <ScrollView>
-            <StackLayout Spacing="20" Padding="15">
+            <StackLayout Spacing="20" Padding="15" >
                 <Label Text="Marca" FontSize="Medium" />
-                <Entry Text="{Binding _libro.Titulo__c}" Placeholder="" FontSize="Small" />
+            <Entry Text="{Binding vehiculo.marca}" Placeholder="" FontSize="Small" />
                 <Label Text="Modelo" FontSize="Medium" />
-                <Editor Text="{Binding _libro.Autor__c}" Placeholder="" FontSize="Small" Margin="0" />
+            <Editor Text="{Binding vehiculo.modelo}" Placeholder="" FontSize="Small" Margin="0" />
                 <Label Text="Color" FontSize="Medium" />
-              <Entry Text="{Binding _libro.Titulo__c}" Placeholder="" FontSize="Small" />
+            <Entry Text="{Binding vehiculo.color}" Placeholder="" FontSize="Small" />
 
               <!--<DatePicker  Date="{Binding _libro.Anio__c}" />-->
                 <Label Text="Placa" FontSize="Medium" />
-                <Entry x:Name="placa1" Text="" Placeholder="xxx" FontSize="Small" />
-                <Entry x:Name="placa2" Text="" Placeholder="xxx" FontSize="Small" />
-
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="placa1" Text="" Placeholder="xxx" MaxLength="3" FontSize="Small" />
+                <Entry x:Name="placa2" Text="" Placeholder="xxx" MaxLength="3" FontSize="Small" />
+            </StackLayout>
+              
               <Label Text="Tipo de Vehiculo" FontSize="Medium" />
-                <Picker x:Name="pickerGenero" Title="Elige un vehiculo" ItemsSource="{Binding ListGeneros}" ItemDisplayBinding="{Binding NameGen}" />
+                <Picker x:Name="pickerTipoVehiculo" Title="Elige un vehiculo" ItemsSource="{Binding ListGeneros}" ItemDisplayBinding="{Binding NameGen}" />
                 <Label Text="Descripción" FontSize="Medium" />
-                <Entry Text="{Binding _libro.Descripcion__c}" Placeholder="Descripcionpara tener en cuenta" FontSize="Small" />
+                
                </StackLayout>
 
         </ScrollView>
         
-    </ContentPage.Content>
+    <!--</ContentPage.Content>-->
 </ContentPage>

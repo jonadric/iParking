@@ -16,7 +16,7 @@
 
     <StackLayout>
         <ListView x:Name="ItemsListView"
-                ItemsSource="{Binding ItemsBooks}"
+                ItemsSource="{Binding ItemsVehicles}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
                 RefreshCommand="{Binding LoadItemsCommand}"
@@ -28,20 +28,28 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="10">
-                            <Image Source="{Binding Imagen__c}" 
+                            <Image  x:Name="imgTipo"
                    HorizontalOptions="Center"
                    HeightRequest="70" WidthRequest="50"
                    TranslationY="10"/>
                             <StackLayout HorizontalOptions="StartAndExpand">
-                                <Label Text="{Binding Titulo__c}" 
+                                <Label Text="{Binding IdUser}" 
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
                                 FontSize="16" />
-                                <Label Text="{Binding Descripcion__c}" 
+                                <Label Text="{Binding marca}" 
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
-                                <Label Text="{Binding Autor__c}" 
+                                <Label Text="{Binding modelo}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="8" />
+                                <Label Text="{Binding placa}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="8" />
+                                <Label Text="{Binding tipoVehiculo}" 
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="8" />
@@ -52,6 +60,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="buscar" WidthRequest="200" Text="BUSCAR ♥" Clicked="BtnRegistrar"/>
     </StackLayout>
 </ContentPage>
