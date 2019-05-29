@@ -5,7 +5,7 @@
              Title="{Binding Title}"
              x:Name="MisCarros">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Donar " Clicked="AddItem_Clicked">
+        <ToolbarItem Text="Añadir Vehiculo" Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="UWP" Value="add.png"/>
@@ -22,37 +22,38 @@
                 RefreshCommand="{Binding LoadItemsCommand}"
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                CachingStrategy="RecycleElement"
-                ItemSelected="OnItemSelected">
+                CachingStrategy="RecycleElement">
+            <!--ItemSelected="OnItemSelected"-->
+                  
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="10">
-                            <Image  x:Name="imgTipo"
+                            <!--<Image  x:Name="imgTipo"
                    HorizontalOptions="Center"
                    HeightRequest="70" WidthRequest="50"
-                   TranslationY="10"/>
+                   TranslationY="10"/>-->
                             <StackLayout HorizontalOptions="StartAndExpand">
-                                <Label Text="{Binding IdUser}" 
+                                <!--<Label Text="{Binding IdUser}" 
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                                <Label Text="{Binding marca}" 
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                                <Label Text="{Binding modelo}" 
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="8" />
+                                FontSize="16" />-->
                                 <Label Text="{Binding placa}" 
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="8" />
+                                FontSize="Large" />
+                                <Label Text="{Binding marca}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="Medium" />
+                                <Label Text="{Binding modelo}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="Medium" />
                                 <Label Text="{Binding tipoVehiculo}" 
                                 LineBreakMode="NoWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="8" />
+                                FontSize="Small" />
                             </StackLayout>
 
                         </StackLayout>

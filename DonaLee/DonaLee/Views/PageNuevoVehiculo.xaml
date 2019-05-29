@@ -40,7 +40,6 @@
               
               <Label Text="Tipo de Vehiculo" FontSize="Medium" />
                 <Picker x:Name="pickerTipoVehiculo" Title="Elige un vehiculo" ItemsSource="{Binding ListGeneros}" ItemDisplayBinding="{Binding NameGen}" />
-                <Label Text="Descripción" FontSize="Medium" />
                 
                </StackLayout>
 

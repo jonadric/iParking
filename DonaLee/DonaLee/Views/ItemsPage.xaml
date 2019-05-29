@@ -14,8 +14,8 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <ScrollView>
-        <WebView HeightRequest="1000" WidthRequest="1000" x:Name="webipark" Source="https://jonadric.github.io/iParkingWeb/" />
+    <ScrollView VerticalScrollBarVisibility="Never" >
+        <WebView HeightRequest="1000" x:Name="webipark" Source="https://jonadric.github.io/iParkingWeb/" />
     </ScrollView>
     
 </ContentPage>

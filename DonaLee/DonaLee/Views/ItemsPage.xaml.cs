@@ -25,14 +25,14 @@ namespace iParking.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Libro;
-            if (item == null)
-                return;
+            //var item = args.SelectedItem as Vehiculo;
+            //if (item == null)
+            //    return;
 
-            await Navigation.PushAsync(new ItemDetailPage(item));
+            //await Navigation.PushAsync(new ItemDetailPage(item));
 
-            // Manually deselect item.
-            //ItemsListView.SelectedItem = null;
+            //// Manually deselect item.
+            ////ItemsListView.SelectedItem = null;
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
